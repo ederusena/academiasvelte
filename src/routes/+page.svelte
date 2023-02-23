@@ -1,2 +1,35 @@
-<h1 class="bg-teal-200">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import imgHome from '../assets/musculacao.jpg';
+</script>
+
+<section class="intro" style="background-image: url({imgHome})">
+	<div class="intro__wrapper wrap">
+		<h1 class="text-4xl">Voce está pronto para o desafio?</h1>
+		<p>
+			A academia local está pronta para te ajudar a chegar mais longe e alcançar sua melhor
+			performance.
+		</p>
+		<a href="/sobre">Sobre</a>
+	</div>
+</section>
+
+<style lang="postcss">
+	.intro {
+		@apply 
+			min-h-[360px]
+			relative
+			bg-cover
+			bg-center
+			grid
+			content-center
+			justify-start
+			after:absolute
+			after:inset-0
+			after:bg-slate-900/50;
+	}
+
+	.intro__wrapper {
+		@apply z-10;
+	}
+	.wrap {}
+</style>
