@@ -1,5 +1,6 @@
 <script>
 	import imgHome from '../assets/musculacao.jpg';
+	import Button from './Button.svelte';
 </script>
 
 <section class="intro" style="background-image: url({imgHome})">
@@ -9,7 +10,8 @@
 			A academia local está pronta para te ajudar a chegar mais longe e alcançar sua melhor
 			performance.
 		</p>
-		<a href="/sobre">Sobre</a>
+		<!-- <a class="btn" href="/sobre">Modalidades</a> -->
+		<Button class="btn primary sm">Modalidades</Button>
 	</div>
 </section>
 

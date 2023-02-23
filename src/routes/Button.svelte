@@ -1,0 +1,47 @@
+<script>
+	let buttonProps = {
+		class: [$$restProps.class]
+	};
+</script>
+
+<button on:click {...buttonProps}>
+	<slot />
+</button>
+
+<!-- 
+  .btn:hover {
+    background-color: #fff;
+    color: var(--black);
+    transition: 125ms;
+  } -->
+<style lang="postcss">
+	.btn {
+		@apply py-2
+            px-3
+            rounded-md
+            transition
+            ease-linear;
+	}
+	.primary {
+		@apply
+            text-white
+            border
+            border-white
+            hover:bg-white
+            hover:text-black;
+	}
+	.danger {
+		@apply
+            text-red-600
+            border 
+            border-red-600
+            hover:bg-red-500
+            hover:text-white;
+	}
+	.sm {
+		@apply text-base p-2;
+	}
+	.lg {
+		@apply text-lg p-2;
+	}
+</style>
