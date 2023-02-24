@@ -8,12 +8,6 @@
 	<slot />
 </button>
 
-<!-- 
-  .btn:hover {
-    background-color: #fff;
-    color: var(--black);
-    transition: 125ms;
-  } -->
 <style lang="postcss">
 	.btn {
 		@apply py-2
