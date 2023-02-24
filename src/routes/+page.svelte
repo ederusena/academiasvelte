@@ -1,6 +1,6 @@
 <script>
-	import imgHome from '../assets/musculacao.jpg';
-	import icon from '../assets/icon-muscle.png';
+	import imgHome from '@assets/musculacao.jpg';
+	import icon from '@assets/icon-muscle.png';
 	import Button from './Button.svelte';
 </script>
 
