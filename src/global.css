@@ -50,9 +50,3 @@
     font-size: calc(36 / 16 * 1rem);
   }
   
-  /* Classes */
-  .wrap {
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  

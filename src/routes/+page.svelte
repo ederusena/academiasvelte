@@ -1,24 +1,28 @@
 <script>
 	import imgHome from '../assets/musculacao.jpg';
+	import icon from '../assets/icon-muscle.png';
 	import Button from './Button.svelte';
 </script>
 
-<section class="intro" style="background-image: url({imgHome})">
-	<div class="intro__wrapper wrap">
-		<h1 class="text-4xl">Voce está pronto para o desafio?</h1>
-		<p>
-			A academia local está pronta para te ajudar a chegar mais longe e alcançar sua melhor
-			performance.
-		</p>
-		<!-- <a class="btn" href="/sobre">Modalidades</a> -->
-		<Button class="btn primary sm">Modalidades</Button>
+<section class="intro">
+	<div class="wrap">
+		<h1 class="px-6 text-4xl mb-4 leading-2">
+			Voce está pronto<br />para o desafio?<img class="muscle" src={icon} alt="muscle alt" />
+		</h1>
+		<div class="px-6 w-[390px]">
+			<p class="mb-4">
+				A academia local está pronta para te ajudar a chegar mais longe e alcançar sua melhor
+				performance.
+			</p>
+		</div>
+		<Button class="btn primary sm mx-6">Modalidades</Button>
 	</div>
 </section>
 
 <style lang="postcss">
 	.intro {
-		@apply 
-			min-h-[360px]
+		@apply min-h-[360px]
+			bg-[url('../assets/musculacao.jpg')]
 			relative
 			bg-cover
 			bg-center
@@ -30,8 +34,11 @@
 			after:bg-slate-900/50;
 	}
 
-	.intro__wrapper {
-		@apply z-10;
+	.wrap {
+		@apply z-10 mx-auto;
 	}
-	.wrap {}
+
+	.muscle {
+		@apply inline max-w-[30px] mb-3;
+	}
 </style>
