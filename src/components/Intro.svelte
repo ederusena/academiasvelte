@@ -1,40 +1,31 @@
 <script>
 	import Button from '@components/Button.svelte';
-    import { useNavigate,useLocation } from 'svelte-navigator';
-    
-    const navigate = useNavigate();
-    const location = useLocation()
+	import iconMuscle from '@assets/icon-muscle.png';
+	import imgMusculacao from '@assets/musculacao.jpg';
 
 	export let title;
 	export let content;
 	export let btn;
 	export let href;
-	export let img;
-	export let icon;
 
-	function openSMitem(path) {
-		closeSnav();
-		console.log(path);
-		setTimeout(() => {
-			navigate(path, {
-				state: { from: $location.pathname },
-				replace: true
-			});
-		}, 300);
-	}
+	export let img;
+	if (img === 'musculacao') img = imgMusculacao;
+
+	export let icon;
+	if (icon === 'muscle') icon = iconMuscle;
 </script>
 
 <section class="intro" style="background-image: url({img});">
 	<div class="wrap">
 		<h1 class="px-6 text-4xl mb-4 leading-2">
-			{title}<img class="muscle" src={icon} alt="muscle alt" />
+			{@html title}<img class="muscle" src={icon} alt="muscle alt" />
 		</h1>
 		<div class="px-6 w-[390px]">
 			<p class="mb-4">
 				{content}
 			</p>
 		</div>
-		<Button class="btn primary sm mx-6">Modalidades</Button>
+		<Button {href} class="btn primary sm mx-6">{btn}</Button>
 	</div>
 </section>
 

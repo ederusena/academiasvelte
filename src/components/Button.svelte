@@ -2,11 +2,13 @@
 	let buttonProps = {
 		class: [$$restProps.class]
 	};
+	export let href;
+
 </script>
 
-<button on:click {...buttonProps}>
+<a href="{href}" {...buttonProps}>
 	<slot />
-</button>
+</a>
 
 <style lang="postcss">
 	.btn {

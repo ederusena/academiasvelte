@@ -1,13 +1,14 @@
 <script>
 	import Intro from '@components/Intro.svelte';
-	import icon from '@assets/icon-muscle.png';
-	import imgHome from '@assets/musculacao.jpg';
+
 
 </script>
 
 <Intro 
-	title="Musculação e Treinamento Funcional"
-	content="Aqui você encontra uma equipe de profissionais qualificados para te ajudar a alcançar seus objetivos."
-	icon={icon}
-	img={imgHome}
+	title="Você esta pronto<br> para o desafio?"
+	content="A Academia Local está pronta para te ajudar a chegar mais longe e alcançar sua melhor performance."
+	icon='muscle'
+	img='musculacao'
+	href="/"
+	btn="Sobre"
 />
