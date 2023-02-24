@@ -26,6 +26,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/cabin": "^4.5.10",
-		"@fontsource/roboto-condensed": "^4.5.9"
+		"@fontsource/roboto-condensed": "^4.5.9",
+		"svelte-navigator": "^3.2.2"
 	}
 }
