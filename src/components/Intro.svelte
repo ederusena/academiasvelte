@@ -1,18 +1,24 @@
 <script>
 	import Button from '@components/Button.svelte';
+
 	import iconMuscle from '@assets/icon-muscle.png';
+	import iconWeight from '@assets/icon-weight.png';
+	
+	import imgExercicios from '@assets/exercicios-grupo.jpg';
 	import imgMusculacao from '@assets/musculacao.jpg';
 
-	export let title;
-	export let content;
-	export let btn;
-	export let href;
+	export let title = "Trocar citulo";
+	export let content = "Trocar conteudo";
+	export let btn = "Trocar titulo botao";
+	export let href = "/";
+	export let img = 'musculacao';
+	export let icon = 'muscle';
 
-	export let img;
 	if (img === 'musculacao') img = imgMusculacao;
+	if (img === 'exercicios') img = imgExercicios;
 
-	export let icon;
 	if (icon === 'muscle') icon = iconMuscle;
+	if (icon === 'weight') icon = iconWeight;
 </script>
 
 <section class="intro" style="background-image: url({img});">
@@ -25,7 +31,9 @@
 				{content}
 			</p>
 		</div>
-		<Button {href} class="btn primary sm mx-6">{btn}</Button>
+		{#if btn && href}
+			<Button {href} class="btn primary sm mx-6">{btn}</Button>
+		{/if}
 	</div>
 </section>
 

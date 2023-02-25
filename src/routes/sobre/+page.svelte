@@ -1,14 +1,14 @@
 <script>
 	import Intro from '@components/Intro.svelte';
-
-
 </script>
 
+<h1>Sobre</h1>
+
 <Intro 
-	title="Você esta pronto<br> para o desafio?"
+	title="Conheça a academia que mais cresce na cidade!"
 	content="A Academia Local está pronta para te ajudar a chegar mais longe e alcançar sua melhor performance."
-	icon='muscle'
-	img='musculacao'
-	href="/sobre"
-	btn="Sobre"
+	img='exercicios'
+	icon='weight'
+	href="/modalidades"
+	btn="Modalidades"
 />
