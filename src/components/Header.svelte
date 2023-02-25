@@ -29,7 +29,7 @@
 
 	.logo {
 		@apply max-w-xs;
-	}
+	}	
 
 	nav {
 		@apply ml-auto;
